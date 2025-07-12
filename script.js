@@ -925,10 +925,11 @@ function updateActiveFilters(category, maxPrice, sortBy) {
     // Category filter
     if (category !== 'all') {
         const categoryName = {
-            'smartphones': 'Smartphones',
-            'laptops': 'Laptops',
-            'accesorios': 'Accesorios',
-            'gaming': 'Gaming'
+            'deportivo': 'G-Shock',
+            'elegante': 'Edifice',
+            'vintage': 'Vintage',
+            'outdoor': 'Pro Trek',
+            'basico': 'Clásicos'
         }[category];
         
         const tag = document.createElement('div');
