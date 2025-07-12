@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OsmediLopez - Tecnología Premium</title>
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon-32x32.png" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+    <!-- Header -->
+    <header class="glass-header">
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">
+                    <img src="https://github.com/Osmedi/recursos/blob/main/file_00000000c99061f984516e23affba8f2%20(1)(1).png?raw=true"
+                        alt="logo" class="logo-img">
+                </a>
+
+                <div class="nav-content">
+                    <ul class="nav-links">
+                        <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                        <li><a href="#productos" class="nav-link">Productos</a></li>
+                        <li><a href="#ofertas" class="nav-link">Ofertas</a></li>
+                        <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                    </ul>
+
+                    <div class="header-actions">
+                        <div class="search-container">
+                            <input type="text" id="searchInput" placeholder="Buscar productos...">
+                            <button id="searchButton" class="search-button">
+                                <i class="fas fa-search"></i>
+                            </button>
+                            <div class="search-suggestions" id="searchSuggestions"></div>
+                        </div>
+
+                        <div class="action-buttons">
+                            <label class="switch">
+                                <input id="theme-checkbox" type="checkbox" />
+                                <span class="slider">
+                                    <div class="star star_1"></div>
+                                    <div class="star star_2"></div>
+                                    <div class="star star_3"></div>
+                                    <svg viewBox="0 0 16 16" class="cloud_1 cloud">
+                                        <path transform="matrix(.77976 0 0 .78395-299.99-418.63)" fill="#fff"
+                                            d="m391.84 540.91c-.421-.329-.949-.524-1.523-.524-1.351 0-2.451 1.084-2.485 2.435-1.395.526-2.388 1.88-2.388 3.466 0 1.874 1.385 3.423 3.182 3.667v.034h12.73v-.006c1.775-.104 3.182-1.584 3.182-3.395 0-1.747-1.309-3.186-2.994-3.379.007-.106.011-.214.011-.322 0-2.707-2.271-4.901-5.072-4.901-2.073 0-3.856 1.202-4.643 2.925">
+                                        </path>
+                                    </svg>
+                                </span>
+                            </label>
+                            <button id="tradeInBtn" class="tradein-btn" onclick="toggleTradeInModal()">
+                                <i class="fas fa-sync-alt"></i> Permuta
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="mobile-menu-toggle" onclick="toggleMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Floating Cart -->
+    <div class="floating-cart" onclick="toggleCart()">
+        <div class="cart-icon">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count" id="cartCount">0</span>
+        </div>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="inicio">
+            <div class="hero-content">
+                <h1 class="hero-title">Relojería <span class="shine highlight">Premium</span> en Honduras</h1>
+<p class="hero-subtitle">Los mejores relojes de lujo con autenticidad garantizada</p>
+                <div class="hero-cta">
+                    <a href="#productos" class="btn-primary">Explorar Productos</a>
+                    <a href="#ofertas" class="btn-secondary">Ver Ofertas</a>
+                </div>
+            </div>
+            <div class="hero-scroll">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </section>
+
+        <!-- Categories -->
+        <section class="categories-section">
+            <div class="container">
+                <h2 class="section-title">Nuestras <span>Categorías</span></h2>
+                <div class="categories-grid">
+    <div class="category-card" onclick="filterProducts('all')">
+        <div class="category-icon">
+            <i class="fas fa-boxes"></i>
+        </div>
+        <h3>Todos</h3>
+    </div>
+    <div class="category-card" onclick="filterProducts('luxury')">
+        <div class="category-icon">
+            <i class="fas fa-gem"></i>
+        </div>
+        <h3>Lujo</h3>
+    </div>
+    <div class="category-card" onclick="filterProducts('sport')">
+        <div class="category-icon">
+            <i class="fas fa-running"></i>
+        </div>
+        <h3>Deportivos</h3>
+    </div>
+    <div class="category-card" onclick="filterProducts('smart')">
+        <div class="category-icon">
+            <i class="fas fa-bluetooth"></i>
+        </div>
+        <h3>Inteligentes</h3>
+    </div>
+    <div class="category-card" onclick="filterProducts('vintage')">
+        <div class="category-icon">
+            <i class="fas fa-history"></i>
+        </div>
+        <h3>Vintage</h3>
+    </div>
+</div>
+            </div>
+        </section>
+
+        <!-- Special Offers -->
+        <section class="products-section" id="ofertas">
+            <!-- Minimal Filter -->
+            <section class="minimal-filter-section">
+                <div class="container">
+                    <div class="minimal-filter-container">
+                        <div class="filter-dropdown">
+                            <button class="filter-toggle" onclick="toggleFilterDropdown()">
+                                <i class="fas fa-sliders-h"></i> Filtros
+                            </button>
+                            <div class="filter-dropdown-content" id="filterDropdown">
+                                <div class="filter-option">
+                                    <label>Categoría</label>
+                                    <select id="categoryFilter" class="filter-select">
+                                        <option value="all">Todas las categorías</option>
+                                        <option value="smartphones">Smartphones</option>
+                                        <option value="laptops">Laptops</option>
+                                        <option value="accesorios">Accesorios</option>
+                                        <option value="gaming">Gaming</option>
+                                    </select>
+                                </div>
+
+                                <div class="filter-option">
+                                    <label>Precio máximo</label>
+                                    <select id="priceFilter" class="filter-select">
+                                        <option value="0">Cualquier precio</option>
+                                        <option value="10000">L.10,000</option>
+                                        <option value="20000">L.20,000</option>
+                                        <option value="30000">L.30,000</option>
+                                        <option value="40000">L.40,000</option>
+                                        <option value="50000">L.50,000+</option>
+                                    </select>
+                                </div>
+
+                                <div class="filter-option">
+                                    <label>Ordenar por</label>
+                                    <select id="sortFilter" class="filter-select">
+                                        <option value="default">Recomendados</option>
+                                        <option value="price-asc">Precio: Menor a Mayor</option>
+                                        <option value="price-desc">Precio: Mayor a Menor</option>
+                                        <option value="rating">Mejor Valorados</option>
+                                    </select>
+                                </div>
+
+                                <button class="apply-filter-btn" onclick="applyMinimalFilters()">Aplicar</button>
+                            </div>
+                        </div>
+
+                        <div class="active-filters" id="activeFilters"></div>
+                    </div>
+                </div>
+            </section>
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Ofertas <span>Especiales</span></h2>
+                    <div class="section-decorator">
+                        <div class="decorator-line"></div>
+                        <div class="decorator-dot"></div>
+                    </div>
+                </div>
+                <div class="products-grid" id="offersGrid"></div>
+            </div>
+        </section>
+
+        <!-- Bestsellers -->
+        <section class="products-section bg-accent">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Los <span>Más Vendidos</span></h2>
+                    <div class="section-decorator">
+                        <div class="decorator-line"></div>
+                        <div class="decorator-dot"></div>
+                    </div>
+                </div>
+                <div class="products-grid" id="bestsellersGrid"></div>
+            </div>
+        </section>
+
+        <!-- All Products -->
+        <section class="products-section" id="productos">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Todos los <span>Productos</span></h2>
+                    <div class="section-decorator">
+                        <div class="decorator-line"></div>
+                        <div class="decorator-dot"></div>
+                    </div>
+                </div>
+                <div class="products-grid" id="productsGrid"></div>
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section class="features-section">
+            <div class="container">
+                <div class="features-grid">
+                    <div class="feature-card">
+    <div class="feature-icon">
+        <i class="fas fa-certificate"></i>
+    </div>
+    <h3>Autenticidad</h3>
+    <p>Certificados de autenticidad en todos nuestros relojes</p>
+</div>
+<div class="feature-card">
+    <div class="feature-icon">
+        <i class="fas fa-clock"></i>
+    </div>
+    <h3>Servicio Técnico</h3>
+    <p>Taller especializado para mantenimiento y reparación</p>
+</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Cart Modal -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="toggleCart()">&times;</span>
+            <h2><i class="fas fa-shopping-cart"></i> Tu Carrito</h2>
+            <div id="cartItems" class="cart-items"></div>
+            <div id="cartTotal" class="cart-total"></div>
+
+            <form class="checkout-form" id="checkoutForm">
+                <h3>Información de Envío</h3>
+                <div class="form-group">
+                    <input type="text" id="customerName" name="customerName" required>
+                    <label for="customerName">Nombre Completo *</label>
+                </div>
+                <div class="form-group">
+                    <input type="tel" id="customerPhone" name="customerPhone" required>
+                    <label for="customerPhone">Teléfono *</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="customerAddress" name="customerAddress" required>
+                    <label for="customerAddress">Dirección *</label>
+                </div>
+                <div class="form-group">
+                    <textarea id="customerNotes" name="customerNotes" rows="3"></textarea>
+                    <label for="customerNotes">Notas Adicionales</label>
+                </div>
+
+                <h3>Método de Pago</h3>
+                <div class="payment-methods">
+                    <div class="payment-option">
+                        <input type="radio" id="bac" name="paymentMethod" value="bac" required>
+                        <label for="bac">
+                            <i class="fab fa-cc-visa"></i>
+                            <span>Tarjeta Bac</span>
+                        </label>
+                    </div>
+                    <div class="payment-option">
+                        <input type="radio" id="ficohsa" name="paymentMethod" value="ficohsa">
+                        <label for="ficohsa">
+                            <i class="fab fa-cc-mastercard"></i>
+                            <span>Tarjeta Ficohsa</span>
+                        </label>
+                    </div>
+                    <div class="payment-option">
+                        <input type="radio" id="amex" name="paymentMethod" value="amex">
+                        <label for="amex">
+                            <i class="fab fa-cc-amex"></i>
+                            <span>American Express</span>
+                        </label>
+                    </div>
+                    <div class="payment-option">
+                        <input type="radio" id="transferencia" name="paymentMethod" value="transferencia">
+                        <label for="transferencia">
+                            <i class="fas fa-exchange-alt"></i>
+                            <span>Transferencia</span>
+                        </label>
+                    </div>
+                    <div class="payment-option">
+                        <input type="radio" id="efectivo" name="paymentMethod" value="efectivo">
+                        <label for="efectivo">
+                            <i class="fas fa-money-bill-wave"></i>
+                            <span>Efectivo</span>
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Finalizar por WhatsApp
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Product Modal -->
+    <div id="productModal" class="modal">
+        <div class="modal-content product-modal-content">
+            <span class="close-modal" onclick="closeProductModal()">&times;</span>
+            <div class="product-modal-body" id="productModalBody"></div>
+        </div>
+    </div>
+
+    <!-- Trade-In Modal -->
+    <div id="tradeInModal" class="modal">
+        <div class="modal-content tradein-content">
+            <span class="close-modal" onclick="closeTradeInModal()">&times;</span>
+            <h2><i class="fas fa-sync-alt"></i> Permuta tu Dispositivo</h2>
+
+            <form id="tradeInForm">
+                <div class="form-group">
+                    <input type="text" id="deviceModel" required>
+                    <label for="deviceModel">Modelo del dispositivo *</label>
+                </div>
+
+                <div class="form-group">
+                    <input type="number" id="deviceStorage" required>
+                    <label for="deviceStorage">Almacenamiento (GB) *</label>
+                </div>
+
+                <div class="form-group">
+                    <input type="number" id="batteryHealth" min="0" max="100" required>
+                    <label for="batteryHealth">Salud de la batería (%) *</label>
+                </div>
+
+                <div class="form-group">
+                    <select id="networkType" required>
+                        <option value=""></option>
+                        <option value="4G">4G LTE</option>
+                        <option value="5G">5G</option>
+                        <option value="3G">3G</option>
+                        <option value="Desbloqueado">Desbloqueado</option>
+                    </select>
+                    <label for="networkType">Tipo de red *</label>
+                </div>
+
+                <div class="form-group">
+                    <select id="deviceCondition" required>
+                        <option value=""></option>
+                        <option value="Excelente">Excelente (sin rayones)</option>
+                        <option value="Bueno">Bueno (pequeños rayones)</option>
+                        <option value="Regular">Regular (defectos visibles)</option>
+                    </select>
+                    <label for="deviceCondition">Estado del dispositivo *</label>
+                </div>
+
+                <div class="form-group">
+                    <textarea id="additionalNotes" rows="3"></textarea>
+                    <label for="additionalNotes">Notas adicionales</label>
+                </div>
+
+                <div class="form-note">
+                    <i class="fas fa-info-circle"></i> Envíanos fotos del dispositivo por WhatsApp
+                </div>
+
+                <button type="submit" class="btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Enviar Solicitud
+                </button>
+            </form>
+        </div>
+    </div>
+
+<!-- Footer -->
+<footer id="contacto">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col footer-about">
+                <img src="https://github.com/Osmedi/recursos/blob/main/file_00000000c99061f984516e23affba8f2%20(1)(1).png?raw=true"
+                    alt="Logo" class="footer-logo">
+                <p>Tu relojería de confianza en Honduras. Autenticidad garantizada con certificados oficiales y servicio técnico especializado.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://wa.me/50496811650" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#productos">Colección</a></li>
+                    <li><a href="#ofertas">Ofertas Exclusivas</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                    <li><a href="#" onclick="toggleTradeInModal()">Servicio de Permutas</a></li>
+                    <li><a href="#">Política de Autenticidad</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Categorías</h3>
+                <ul>
+                    <li><a href="#" onclick="filterProducts('luxury')">Relojes de Lujo</a></li>
+                    <li><a href="#" onclick="filterProducts('sport')">Relojes Deportivos</a></li>
+                    <li><a href="#" onclick="filterProducts('smart')">Relojes Inteligentes</a></li>
+                    <li><a href="#" onclick="filterProducts('vintage')">Relojes Vintage</a></li>
+                    <li><a href="#" onclick="filterProducts('all')">Ver Todo</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Servicios</h3>
+                <ul>
+                    <li><a href="#">Autenticación y Certificación</a></li>
+                    <li><a href="#">Mantenimiento Premium</a></li>
+                    <li><a href="#">Restauración de Relojes</a></li>
+                    <li><a href="#">Valuación Profesional</a></li>
+                    <li><a href="#">Programa de Consignación</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Contacto</h3>
+                <ul class="contact-info">
+                    <li><i class="fas fa-phone"></i> +504 9681-1650</li>
+                    <li><i class="fas fa-envelope"></i> relojeria@osmedilopez.com</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Boulevard Morazán, San Pedro Sula</li>
+                    <li><i class="fas fa-clock"></i> Lun-Vie: 9AM-6PM | Sáb: 10AM-2PM</li>
+                    <li><i class="fas fa-calendar-alt"></i> Citas para valuaciones</li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Métodos de Pago</h3>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa" title="Visa"></i>
+                    <i class="fab fa-cc-mastercard" title="Mastercard"></i>
+                    <i class="fab fa-cc-amex" title="American Express"></i>
+                    <i class="fas fa-money-bill-wave" title="Efectivo"></i>
+                    <i class="fas fa-exchange-alt" title="Transferencia"></i>
+                    <i class="fas fa-coins" title="Oro (permutas)"></i>
+                </div>
+                
+                <h3 style="margin-top: 20px;">Certificaciones</h3>
+                <div class="certifications">
+                    <img src="https://via.placeholder.com/80x40?text=Rolex" alt="Rolex Certified" title="Taller Autorizado Rolex">
+                    <img src="https://via.placeholder.com/80x40?text=Omega" alt="Omega Certified" title="Centro de Servicio Omega">
+                    <img src="https://via.placeholder.com/80x40?text=COSC" alt="COSC Certified" title="Cronómetros Certificados">
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 OsmediLopez Relojería. Todos los derechos reservados. | <a href="#">Términos y Condiciones</a> | <a href="#">Política de Privacidad</a></p>
+        </div>
+    </div>
+</footer>
+    <script src="script.js"></script>
+</body>
+</html>
