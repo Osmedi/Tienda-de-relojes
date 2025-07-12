@@ -47,174 +47,199 @@ document.addEventListener('click', function(e) {
 const products = [
     {
         id: 1,
-        name: "Apple Watch Series 9",
-        price: 10999,
-        originalPrice: 12999,
-        category: "smartwatches",
+        name: "Casio G-Shock DW5600E-1V",
+        price: 2500,
+        originalPrice: 3200,
+        category: "deportivo",
         images: [
-            "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-45-nc-alum-midnight-sport-band-midnight-s9?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=MlhKWC9ONnZOT3ByN1d2ZXZ3bUZWa0ZJcTJmVnkremtWQnhKNWcvRmM5V1ZpQ0lZaUJoMkFockVLc1FVdGZYWG5TWi9LS0E1SGVGS0xvbFN5RUZuMzdyOHVPU1JYbmpuZ2tHQnprWWtiamdqNisyR1pQVWlRTHlET0NaY0FhYUJOUXFocFYzU3dEdW03ZSt4RnJ3OGV3",
-            "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-45-nc-alum-midnight-sport-band-midnight-s9_AV1?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=MlhKWC9ONnZOT3ByN1d2ZXZ3bUZWa0ZJcTJmVnkremtWQnhKNWcvRmM5V1ZpQ0lZaUJoMkFockVLc1FVdGZYWFBJdm5GOVR0aHFoaXIrVTNvWXZSZEFrblR2MzBEQmVEYmt3OUsyRTk5T2lRU2tPNUhYL1NFU3o2WHN5Z09RWS93OVpyRDFVdG56OExySzJpVWttQ1ln",
-            "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-45-nc-alum-midnight-sport-band-midnight-s9_AV2?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=MlhKWC9ONnZOT3ByN1d2ZXZ3bUZWa0ZJcTJmVnkremtWQnhKNWcvRmM5V1ZpQ0lZaUJoMkFockVLc1FVdGZYWHNMQUkrcW5XZVcvcUJLUWl1d1RmMWdrblR2MzBEQmVEYmt3OUsyRTk5T2lRU2tPNUhYL1NFU3o2WHN5Z09RWS8ybUV6N3lZMUFTQTZEenhINWxVT3ZR"
+            "https://www.casio.com/content/dam/casio/product-info/locales/in/en/timepiece/product/watch/D/DW/DW5/DW-5600E-1VQ/assets/DW-5600E-1VQ_Seq1.png.transform/main-visual-pc/image.png",
+            "https://www.casio.com/content/dam/casio/product-info/locales/in/en/timepiece/product/watch/D/DW/DWE/dwe-5600ud-1/assets/DWE-5600UD-1.png.transform/main-visual-pc/image.png",
+            "https://www.casio.com/content/dam/casio/product-info/locales/in/en/timepiece/product/watch/D/DW/DWE/dwe-5600jb-1a9/assets/DWE-5600JB-1A9.png.transform/main-visual-pc/image.png"
         ],
         specs: {
-            pantalla: "Always-On Retina Display (hasta 2000 nits)",
-            procesador: "S9 SiP con Neural Engine de 4 núcleos",
-            almacenamiento: "64GB",
-            bateria: "Hasta 18 horas (36 horas en modo de bajo consumo)",
-            sistema: "watchOS 10",
-            conectividad: "GPS, Cellular (opcional), Wi-Fi, Bluetooth 5.3",
-            resistencia: "Resistencia al agua de 50m"
+            "Serie": "G-Shock",
+            "Resistencia": "200 metros",
+            "Funciones": "Cronógrafo, alarma, calendario automático",
+            "Iluminación": "Electroluminiscente",
+            "Pila": "CR2016 (dura aproximadamente 2 años)",
+            "Tamaño": "48.9 × 42.8 × 13.4 mm",
+            "Peso": "53 g"
         },
         features: [
-            "Medición de oxígeno en sangre",
-            "Electrocardiograma (ECG)",
-            "Sensor de temperatura",
-            "Detección de accidentes y caídas",
-            "Control por gestos con 'Doble Toque'",
-            "Siri en el dispositivo",
-            "GPS de precisión",
-            "Brújula y función 'Retornar'"
+            "Resistente a impactos",
+            "Resistente al agua para natación y buceo",
+            "Carcasa de resina duradera",
+            "Temporizador de 1/100 segundos",
+            "Función de hora mundial (48 ciudades)"
         ],
         rating: 5,
-        reviews: 12,
+        reviews: 36,
+        badge: "Best Seller",
+        isBestseller: true,
+        isOffer: true
+    },
+    {
+        id: 2,
+        name: "Casio Edifice EFR-S108D-1AVUDF",
+        price: 3800,
+        originalPrice: 4500,
+        category: "elegante",
+        images: [
+            "https://image.ceneostatic.pl/data/products/102569645/i-casio-efrs108d1avudf.jpg",
+            "https://image.ceneostatic.pl/data/products/102569645/4ca813b4-9d14-4dac-bcee-9e61a8c4cb25_i-casio-efrs108d1avudf.jpg",
+            "https://image.ceneostatic.pl/data/products/102569645/d7147c2d-316f-4a97-9a82-1bc6aa6ca459_i-casio-efrs108d1avudf.jpg"
+        ],
+        specs: {
+            "Serie": "Edifice",
+            "Resistencia": "100 metros",
+            "Funciones": "Cronógrafo, calendario",
+            "Cristal": "Mineral",
+            "Pulso": "Acero inoxidable",
+            "Tamaño": "44.1 × 38.4 × 8.3 mm",
+            "Peso": "90 g"
+        },
+        features: [
+            "Diseño elegante y deportivo",
+            "Manecillas y marcadores luminiscentes",
+            "Correa de acero inoxidable",
+            "Cronógrafo de 1/20 segundos",
+            "Calendario automático hasta 2099"
+        ],
+        rating: 4,
+        reviews: 28,
         badge: "Nuevo",
         isBestseller: true,
         isOffer: false
     },
     {
-        id: 2,
-        name: "Samsung Galaxy Watch 6 Classic",
-        price: 7999,
-        originalPrice: 9500,
-        category: "smartwatches",
+        id: 3,
+        name: "Casio Vintage A168WG-9EF",
+        price: 1800,
+        originalPrice: 2200,
+        category: "vintage",
         images: [
-            "https://www.gizerler.com/assets/product-images/141000/samsung-watch6-classicsm-r960nzsatur-47-mm-gumus-akilli-saat_79336.jpg",
-            "https://www.gizerler.com/assets/product-images/141000/samsung-watch6-classicsm-r960nzsatur-47-mm-gumus-akilli-saat_79338.jpg",
-            "https://www.gizerler.com/assets/product-images/141000/samsung-watch6-classicsm-r960nzsatur-47-mm-gumus-akilli-saat_79340.jpg"
+            "https://www.hodinky-365.com/fotky/mid/f007/casio-vintage-a168wg-9ef_22562_294760.jpg",
+            "https://www.hodinky-365.com/fotky/maxi3/f007/casio-vintage-a168wg-9ef_22562_2.jpg",
+            "https://www.hodinky-365.com/fotky/maxi3/f007/casio-vintage-a168wg-9ef_22562_3.jpg"
         ],
         specs: {
-            pantalla: "Super AMOLED (hasta 2000 nits) con bisel giratorio",
-            procesador: "Exynos W930 Dual-Core 1.4GHz",
-            memoria: "2GB RAM + 16GB Almacenamiento",
-            bateria: "Hasta 30 horas (40 horas con Always-On Display desactivado)",
-            sistema: "Wear OS Powered by Samsung (One UI Watch 5)",
-            conectividad: "GPS, NFC, Bluetooth 5.3, Wi-Fi",
-            resistencia: "Resistencia al agua 5 ATM + IP68"
+            "Serie": "Vintage",
+            "Resistencia": "30 metros",
+            "Funciones": "Alarma, calendario",
+            "Iluminación": "LED",
+            "Pila": "CR2016 (dura aproximadamente 7 años)",
+            "Tamaño": "37 × 35 × 8.5 mm",
+            "Peso": "42 g"
         },
         features: [
-            "Medición de composición corporal (BIA)",
-            "Electrocardiograma (ECG)",
-            "Sensor de frecuencia cardíaca",
-            "Monitoreo avanzado del sueño",
-            "Detección de caídas",
-            "Pago sin contacto con Samsung Pay / Google Wallet",
-            "Compatible con correas estándar de 20mm"
+            "Diseño retro años 80",
+            "Carcasa y pulsera doradas",
+            "Pantalla digital LCD",
+            "Función de alarma diaria",
+            "Calendario automático"
         ],
         rating: 4,
-        reviews: 9,
-        badge: "Oferta",
-        isBestseller: true,
+        reviews: 42,
+        badge: "Vintage",
+        isBestseller: false,
         isOffer: true
     },
     {
-        id: 3,
-        name: "Garmin Fenix 7 Pro",
-        price: 21500,
-        originalPrice: 25000,
-        category: "smartwatches",
-        images: [
-            "https://www.garmin.co.id/m/id/g/products/fenix-7-pro-sapphire-carbongray-cf-lg.jpg",
-            "https://www.garmin.co.id/m/id/g/products/fenix-7-pro-sapphire-carbongray-pd-01-lg.jpg",
-            "https://www.garmin.co.id/m/id/g/products/fenix-7-pro-sapphire-carbongray-pd-03-lg.jpg"
-        ],
-        specs: {
-            pantalla: "Memory-in-Pixel (MIP) transflectiva con carga solar",
-            materiales: "Caja de polímero reforzado con fibra, bisel de acero o titanio",
-            bateria: "Hasta 18 días (22 días con carga solar) en modo smartwatch",
-            gps: "GPS, GLONASS, Galileo multibanda",
-            resistencia: "10 ATM",
-            sensores: "Frecuencia cardíaca, Pulse Ox, altímetro barométrico, brújula, giroscopio, acelerómetro, termómetro"
-        },
-        features: [
-            "Linterna LED integrada",
-            "Puntuación de pendiente y resistencia",
-            "Métricas de rendimiento avanzadas (VO2 Max, estado de entrenamiento)",
-            "Mapas TopoActive precargados",
-            "Garmin Pay (pagos sin contacto)",
-            "Aplicaciones deportivas precargadas (carrera, ciclismo, natación, etc.)",
-            "Monitor de energía Body Battery",
-            "Seguimiento del sueño y estrés"
-        ],
-        rating: 5,
-        reviews: 7,
-        badge: "Top Ventas",
-        isBestseller: true,
-        isOffer: false
-    },
-    {
         id: 4,
-        name: "Fitbit Sense 2",
-        price: 5200,
-        originalPrice: 6500,
-        category: "smartwatches",
+        name: "Casio Baby-G BGA-280-7B",
+        price: 3200,
+        originalPrice: 3800,
+        category: "deportivo",
         images: [
-            "https://www.jbhifi.com.au/cdn/shop/products/601075-Product-0-I-637968695577262409.jpg?v=1661320407",
-            "https://www.jbhifi.com.au/cdn/shop/products/601074-Product-7-I-637968693783805471.jpg?v=1661320419",
-            "https://www.jbhifi.com.au/cdn/shop/products/601074-Product-8-I-637968693778649193.jpg?v=1661320419"
+            "https://m.media-amazon.com/images/I/41m82rJabFL._AC_SX679_.jpg",
+            "https://m.media-amazon.com/images/I/41dDhuZaqtL._AC_SX679_.jpg",
+            "https://m.media-amazon.com/images/I/41L8qrv-4DL._AC_SX679_.jpg"
         ],
         specs: {
-            pantalla: "AMOLED con Always-On Display",
-            bateria: "Más de 6 días con carga rápida",
-            conectividad: "Bluetooth 5.0, Wi-Fi, GPS integrado, NFC",
-            resistencia: "Resistencia al agua de 50m",
-            sensores: "EDA (actividad electrodérmica) para manejo de estrés, frecuencia cardíaca, temperatura cutánea"
+            "Serie": "Baby-G",
+            "Resistencia": "200 metros",
+            "Funciones": "Cronógrafo, alarma, calendario",
+            "Iluminación": "LED",
+            "Pila": "CR2016",
+            "Tamaño": "43.4 × 38.4 × 13.3 mm",
+            "Peso": "42 g"
         },
         features: [
-            "Monitoreo de estrés durante todo el día con cEDA",
-            "Notificaciones de frecuencia cardíaca alta/baja",
-            "Seguimiento avanzado del sueño",
-            "GPS integrado para seguimiento de ritmo y distancia",
-            "Pagos con Fitbit Pay",
-            "Alertas y notificaciones inteligentes",
-            "Compatible con iOS y Android"
+            "Resistente a impactos",
+            "Diseño unisex",
+            "Carcasa blanca con detalles plateados",
+            "Temporizador de cuenta regresiva",
+            "Hora mundial (48 ciudades)"
         ],
         rating: 4,
-        reviews: 5,
+        reviews: 19,
         badge: "Oferta",
         isBestseller: false,
         isOffer: true
     },
     {
         id: 5,
-        name: "Huawei Watch GT 4",
-        price: 5999,
-        originalPrice: 7000,
-        category: "smartwatches",
+        name: "Casio Pro Trek PRW-3510Y-8CR",
+        price: 6500,
+        originalPrice: 7500,
+        category: "outdoor",
         images: [
-            "https://www.vopmart.com/media/wysiwyg/Huawei/Huawei-Watch-GT4-08.jpg",
-            "https://consumer.huawei.com/content/dam/huawei-cbg-site/common/mkt/pdp/wearables/watch-gt4/watch-gt4-g/images/sec5/huawei-watch-gt4-quick-message-reply.webp",
-            "https://consumer.huawei.com/content/dam/huawei-cbg-site/common/mkt/pdp/wearables/watch-gt4/watch-gt4-g/images/sec5/huawei-watch-gt4-calendar-app.webp"
+            "https://i.ebayimg.com/images/g/lZoAAOSwWeFkh1hM/s-l1200.jpg",
+            "https://www.hodinky-365.com/dokumenty/upload/clanky_auto/casio-protrek-prw-35y-1ber-240977-3442251_860.jpg",
+            "https://www.hodinky-365.com/dokumenty/upload/clanky_auto/casio-g-shock-mudman-gw-9500-3er-carbon-core-guard-240985-3352051_860.jpg"
         ],
         specs: {
-            pantalla: "AMOLED de 1.43 pulgadas (466 x 466 píxeles)",
-            bateria: "Hasta 14 días de duración",
-            conectividad: "Bluetooth, GPS, NFC",
-            resistencia: "Resistencia al agua de 5 ATM",
-            compatibilidad: "Android e iOS"
+            "Serie": "Pro Trek",
+            "Resistencia": "200 metros",
+            "Funciones": "Brújula, barómetro, altímetro, termómetro",
+            "Energía": "Solar",
+            "Cristal": "Mineral",
+            "Tamaño": "55.1 × 50.5 × 14.4 mm",
+            "Peso": "76 g"
         },
         features: [
-            "Seguimiento de la salud TruSeen™ 5.5+",
-            "Gestión del ciclo menstrual 3.0",
-            "Monitorización del sueño TruSleep™ 3.0",
-            "Más de 100 modos de entrenamiento",
-            "Calorías en un vistazo",
-            "Respuestas rápidas personalizadas (solo Android)",
-            "Llamadas Bluetooth"
+            "Tecnología Tough Solar",
+            "Sensores Triple Sensor v3",
+            "Carcasa y correa de resina negra",
+            "Pantalla digital con iluminación LED",
+            "Modo de ahorro de energía"
         ],
-        rating: 4,
-        reviews: 6,
-        badge: "Promoción",
-        isBestseller: false,
+        rating: 5,
+        reviews: 15,
+        badge: "Premium",
+        isBestseller: true,
+        isOffer: false
+    },
+    {
+        id: 6,
+        name: "Casio F-91W-1YEF",
+        price: 800,
+        originalPrice: 1200,
+        category: "basico",
+        images: [
+            "https://i.ebayimg.com/images/g/-5QAAOSwHU9eMBnE/s-l1600.webp",
+            "https://i.ebayimg.com/images/g/qjUAAOSwbjpeMBnE/s-l960.webp",
+            "https://i.ebayimg.com/images/g/exgAAOSw5fJeMBnE/s-l960.webp"
+        ],
+        specs: {
+            "Serie": "Clásico",
+            "Resistencia": "30 metros",
+            "Funciones": "Alarma, cronógrafo",
+            "Pila": "CR2016 (dura aproximadamente 7 años)",
+            "Tamaño": "38.2 × 35.2 × 8.5 mm",
+            "Peso": "21 g"
+        },
+        features: [
+            "Diseño icónico desde 1991",
+            "Carcasa de resina negra",
+            "Pantalla LCD digital",
+            "Cronómetro de 1/100 segundos",
+            "Alarma diaria"
+        ],
+        rating: 5,
+        reviews: 89,
+        badge: "Clásico",
+        isBestseller: true,
         isOffer: true
     }
 ];
